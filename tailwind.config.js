@@ -16,6 +16,9 @@ export default {
       fontFamily: {
         rubik: ["'Rubik', sans-serif"],
       },
+      width: {
+        128: "39rem",
+      },
     },
   },
   plugins: [],

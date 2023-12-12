@@ -177,13 +177,22 @@ function App() {
         </div>
       </div>
 
-      <div className="flex justify-between max-w-full shadow-sm shadow-gray-500 bg-white p-5 rounded-lg mt-3 items-start">
-        <img src={juliusomo} alt="" className="" />
-        <input
-          type="text"
-          className="py-10 px-48 border-slate-900 border-solid"
+      <div className="flex justify-between min-h-150px rounded shadow-sm shadow-gray-500 mt-3 py-2 px-7">
+        {/* <div className="flex min-h-full gap-4 p-3"> */}
+        <img
+          src={ramsesmiron}
+          alt="User Avatar"
+          className="w-11 rounded-full mr-4 self-start"
         />
-        <button className="bg-blue-500 py-0.5 px-3">SEND</button>
+        <textarea
+          type="text"
+          placeholder="Add a comment..."
+          className="border-2 border-lightGray w-[39rem] h-24"
+        ></textarea>
+        {/* </div> */}
+        <button className="ml-4 px-3 py-1 self-start bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+          SEND
+        </button>
       </div>
     </main>
   );
