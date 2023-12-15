@@ -13,12 +13,12 @@ import juliusomo from "./assets/avatars/image-juliusomo.png";
 
 function App() {
   return (
-    <main className="  min-h-screen max-w-3xl mx-auto flex flex-col justify-center items-center font-rubik text-sm">
-      <div className=" flex items-center bg-white-500 bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg">
-        <div className="bg-lightGray p-4 py-5 rounded-lg mr-3">
-          <img src={plus} alt="" className="pb-2" />
-          <p className="">4</p>
-          <img src={minus} alt="" className="pt-2" />
+    <main className=" min-h-screen max-w-2xl mx-auto flex flex-col justify-center items-center font-rubik text-sm">
+      <div className=" bg-white flex items-center bg-white-500 bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg ">
+        <div className="bg-lightGray p-4 py-5 rounded-lg mr-3 ">
+          <img src={plus} alt="" className="pb-2 cursor-pointer" />
+          <p className="transform rotate-180+90">4</p>
+          <img src={minus} alt="" className="pt-2 cursor-pointer" />
         </div>
         <div className="  text-start">
           <div className=" flex items-center justify-between">
@@ -31,7 +31,7 @@ function App() {
               <span className="text-grayishBlue">1 Month ago</span>
             </div>
             <div className="flex items-center">
-              <img src={reply} alt="" className="" />
+              <img src={reply} alt="" className="cursor-pointer" />
               <h2 className="pl-3 text-blue-500">Reply</h2>
             </div>
           </div>
@@ -49,11 +49,16 @@ function App() {
         </div>
       </div>
 
-      <div className=" flex items-center bg-white-500 mb-5 bg-white-500 shadow-sm shadow-gray-500 p-5 rounded-lg mt-3">
+      <div className=" bg-white flex items-center bg-white-500 mb-5 bg-white-500 shadow-sm shadow-gray-500 p-5 rounded-lg mt-3">
         <div className="bg-lightGray p-4 py-5 rounded-lg mr-3">
-          <img src={plus} alt="" className="pb-2" />
+          <img
+            src={plus}
+            alt=""
+            className="pb-2 cursor-pointer
+          "
+          />
           <p className="">4</p>
-          <img src={minus} alt="" className="pt-2" />
+          <img src={minus} alt="" className="pt-2 cursor-pointer" />
         </div>
         <div className="text-start">
           <div className=" flex items-center justify-between">
@@ -66,7 +71,7 @@ function App() {
               <span className="text-grayishBlue">2 week ago</span>
             </div>
             <div className="flex items-center">
-              <img src={reply} alt="" className="" />
+              <img src={reply} alt="" className=" cursor-pointer" />
               <h2 className="pl-3 text-blue-500">Reply</h2>
             </div>
           </div>
@@ -87,7 +92,7 @@ function App() {
       <div className=" flex justify-between">
         <div className="border-l-2 border-gray-400 h-18 flex justify-center mx-auto"></div>
         <div className="w-11/12">
-          <div className=" flex items-center  bg-white-500 p-3 shadow-sm shadow-gray-500 rounded-lg mt-3  ">
+          <div className=" bg-white flex items-center  bg-white-500 p-3 shadow-sm shadow-gray-500 rounded-lg mt-3  ">
             <div className="bg-lightGray p-4 py-5 rounded-lg mr-3">
               <img src={plus} alt="" className="pb-2" />
               <p className="">4</p>
@@ -107,11 +112,11 @@ function App() {
                     </span>
                   </div>
 
-                  <span className="grayishBlue">1 week ago</span>
+                  <span className="text-grayishBlue">1 week ago</span>
                 </div>
                 <div className="flex items-center">
                   <img src={reply} alt="" className="" />
-                  <h2 className="pl-3 text-blue-500s">Reply</h2>
+                  <h2 className="pl-3 text-blue-500">Reply</h2>
                 </div>
               </div>
               <p className="text-grayishBlue">
@@ -131,7 +136,7 @@ function App() {
             </div>
           </div>
 
-          <div className="  flex items-center bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg mt-3  ">
+          <div className="bg-white  flex items-center bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg mt-3  ">
             <div className="bg-lightGray p-4 py-5 rounded-lg mr-3">
               <img src={plus} alt="" className="pb-2" />
               <p className="">4</p>
@@ -177,7 +182,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex justify-between min-h-150px rounded shadow-sm shadow-gray-500 mt-3 py-2 px-7">
+      <div className=" bg-white flex justify-between min-h-150px rounded shadow-sm shadow-gray-500 mt-3 py-2 px-7">
         {/* <div className="flex min-h-full gap-4 p-3"> */}
         <img
           src={ramsesmiron}
@@ -187,13 +192,28 @@ function App() {
         <textarea
           type="text"
           placeholder="Add a comment..."
-          className="border-2 border-lightGray w-[39rem] h-24"
+          className="border-2 border-lightGray w-[30rem] h-24"
         ></textarea>
         {/* </div> */}
         <button className="ml-4 px-3 py-1 self-start bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
           SEND
         </button>
       </div>
+      <section className="mt-3 bg-white shadow-sm shadow-gray-500 w-96 p-3">
+        <h3>Delete Comment</h3>
+        <p className="text-grayishBlue  text-start mt-3">
+          Are you sure you want to delete this comment?This will remove the
+          comment and it can't be undone
+        </p>
+        <div className="flex justify-center mt-3 gap-4">
+          <button className="bg-gray-500 px-3 py-1  text-white rounded">
+            No, Cancel
+          </button>
+          <button className="bg-red-500 px-3 py-1 text-white rounded">
+            Yes, Delete
+          </button>
+        </div>
+      </section>
     </main>
   );
 }

@@ -17,7 +17,7 @@ export default {
         rubik: ["'Rubik', sans-serif"],
       },
       width: {
-        128: "39rem",
+        128: "30rem",
       },
     },
   },
