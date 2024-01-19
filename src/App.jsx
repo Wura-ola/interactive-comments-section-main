@@ -13,11 +13,11 @@ import juliusomo from "./assets/avatars/image-juliusomo.png";
 
 function App() {
   return (
-    <main className=" min-h-screen max-w-2xl mx-auto flex flex-col justify-center items-center font-rubik text-sm">
-      <div className=" bg-white flex items-center bg-white-500 bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg ">
-        <div className="bg-lightGray p-4 py-5 rounded-lg mr-3 ">
+    <main className=" min-h-screen max-w-2xl mx-auto flex flex-col justify-center items-center font-rubik text-sm  ">
+      <div className=" bg-white  block md:flex items-center bg-white-500 bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg ">
+        <div className="hidden  md:visible md:bg-lightGray md:p-4 py-5 md:rounded-lg md:mr-3  ">
           <img src={plus} alt="" className="pb-2 cursor-pointer" />
-          <p className="transform rotate-180+90">4</p>
+          <p className="">4</p>
           <img src={minus} alt="" className="pt-2 cursor-pointer" />
         </div>
         <div className="  text-start">
@@ -30,7 +30,7 @@ function App() {
 
               <span className="text-grayishBlue">1 Month ago</span>
             </div>
-            <div className="flex items-center">
+            <div className="hidden md:visible md:flex md:items-center ">
               <img src={reply} alt="" className="cursor-pointer" />
               <h2 className="pl-3 text-blue-500">Reply</h2>
             </div>
@@ -47,10 +47,21 @@ function App() {
             breakpoint works really well.
           </p>
         </div>
+        <div className=" mt-4 flex justify-between md:hidden">
+          <div className="flex justify-between items-center bg-lightGray py-3 px-5 rounded-lg  mr-3">
+            <img src={plus} alt="" className="pr-3 cursor-pointer" />
+            <h2>4</h2>
+            <img src={minus} alt="" className="pl-3 cursor-pointer" />
+          </div>
+          <div className="flex items-center">
+            <img src={reply} alt="" className="cursor-pointer" />
+            <h2 className="pl-3 text-blue-500">Reply</h2>
+          </div>
+        </div>
       </div>
 
-      <div className=" bg-white flex items-center bg-white-500 mb-5 bg-white-500 shadow-sm shadow-gray-500 p-5 rounded-lg mt-3">
-        <div className="bg-lightGray p-4 py-5 rounded-lg mr-3">
+      <div className="block bg-white md:flex items-center bg-white-500 mb-5 bg-white-500 shadow-sm shadow-gray-500 p-5 rounded-lg mt-3 ">
+        <div className=" hidden md:bg-lightGray md:p-4 md:py-5 md:rounded-lg md:mr-3 ">
           <img
             src={plus}
             alt=""
@@ -70,7 +81,7 @@ function App() {
 
               <span className="text-grayishBlue">2 week ago</span>
             </div>
-            <div className="flex items-center">
+            <div className=" hidden md:visible md:flex md:items-center">
               <img src={reply} alt="" className=" cursor-pointer" />
               <h2 className="pl-3 text-blue-500">Reply</h2>
             </div>
@@ -87,13 +98,24 @@ function App() {
             breakpoint works really well.
           </p>
         </div>
+        <div className="md:hidden mt-4 flex justify-between">
+          <div className="flex justify-between items-center bg-lightGray py-3 px-5 rounded-lg  mr-3">
+            <img src={plus} alt="" className="pr-3 cursor-pointer" />
+            <h2>4</h2>
+            <img src={minus} alt="" className="pl-3 cursor-pointer" />
+          </div>
+          <div className="flex items-center">
+            <img src={reply} alt="" className="cursor-pointer" />
+            <h2 className="pl-3 text-blue-500">Reply</h2>
+          </div>
+        </div>
       </div>
 
       <div className=" flex justify-between">
         <div className="border-l-2 border-gray-400 h-18 flex justify-center mx-auto"></div>
         <div className="w-11/12">
-          <div className=" bg-white flex items-center  bg-white-500 p-3 shadow-sm shadow-gray-500 rounded-lg mt-3  ">
-            <div className="bg-lightGray p-4 py-5 rounded-lg mr-3">
+          <div className="block bg-white md:flex items-center  bg-white-500 p-3 shadow-sm shadow-gray-500 rounded-lg mt-3 ">
+            <div className=" hidden md:visible md:bg-lightGray md:p-4 md:py-5 md:rounded-lg md:mr-3 ">
               <img src={plus} alt="" className="pb-2" />
               <p className="">4</p>
               <img src={minus} alt="" className="pt-2" />
@@ -114,7 +136,7 @@ function App() {
 
                   <span className="text-grayishBlue">1 week ago</span>
                 </div>
-                <div className="flex items-center">
+                <div className=" hidden md:flex md:visible md:items-center ">
                   <img src={reply} alt="" className="" />
                   <h2 className="pl-3 text-blue-500">Reply</h2>
                 </div>
@@ -134,10 +156,21 @@ function App() {
                 breakpoint works really well.
               </p>
             </div>
+            <div className="md:hidden mt-4 flex justify-between">
+              <div className="flex justify-between items-center bg-lightGray py-3 px-5 rounded-lg  mr-3">
+                <img src={plus} alt="" className="pr-3 cursor-pointer" />
+                <h2>4</h2>
+                <img src={minus} alt="" className="pl-3 cursor-pointer" />
+              </div>
+              <div className="flex items-center">
+                <img src={reply} alt="" className="cursor-pointer" />
+                <h2 className="pl-3 text-blue-500">Reply</h2>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white  flex items-center bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg mt-3  ">
-            <div className="bg-lightGray p-4 py-5 rounded-lg mr-3">
+          <div className="bg-white block md:flex items-center bg-white-500 p-5 shadow-sm shadow-gray-500 rounded-lg mt-3  ">
+            <div className="hidden md:visible md:bg-lightGray md:p-4 md:py-5 md:rounded-lg md:mr-3 ">
               <img src={plus} alt="" className="pb-2" />
               <p className="">4</p>
               <img src={minus} alt="" className="pt-2" />
@@ -156,7 +189,7 @@ function App() {
 
                   <span className="grayishBlue">2 days ago</span>
                 </div>
-                <div className="flex items-center">
+                <div className=" hidden md:visible md:flex md:items-center ">
                   <img src={dele} alt="" />
                   <h2 className="pr-3 pl-3 text-red-500">Delete</h2>
                   <img src={edit} alt="" className="" />
@@ -178,16 +211,28 @@ function App() {
                 breakpoint works really well.
               </p>
             </div>
+            <div className="md:hidden  mt-4 flex justify-between">
+              <div className="flex justify-between items-center bg-lightGray py-3 px-5 rounded-lg  mr-3">
+                <img src={plus} alt="" className="pr-3 cursor-pointer" />
+                <h2>4</h2>
+                <img src={minus} alt="" className="pl-3 cursor-pointer" />
+              </div>
+              <div className="flex items-center">
+                <img src={dele} alt="" />
+                <h2 className="pr-3 pl-3 text-red-500">Delete</h2>
+                <img src={edit} alt="" className="" />
+                <h2 className=" pr-3 pl-3 text-blue-500">Edit</h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className=" bg-white flex justify-between min-h-150px rounded shadow-sm shadow-gray-500 mt-3 py-2 px-7">
-        {/* <div className="flex min-h-full gap-4 p-3"> */}
         <img
           src={ramsesmiron}
           alt="User Avatar"
-          className="w-11 rounded-full mr-4 self-start"
+          className=" md:visible md:w-11 md:rounded-full md:mr-4 md:self-start"
         />
         <textarea
           type="text"
@@ -199,7 +244,7 @@ function App() {
           SEND
         </button>
       </div>
-      <section className="mt-3 bg-white shadow-sm shadow-gray-500 w-96 p-3">
+      {/* <section className="mt-3 bg-white shadow-sm shadow-gray-500 w-96 p-3">
         <h3>Delete Comment</h3>
         <p className="text-grayishBlue  text-start mt-3">
           Are you sure you want to delete this comment?This will remove the
@@ -213,7 +258,7 @@ function App() {
             Yes, Delete
           </button>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
