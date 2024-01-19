@@ -18,6 +18,8 @@ export default {
       },
       width: {
         128: "30rem",
+        120: "20rem",
+        119: "18rem,",
       },
     },
   },
