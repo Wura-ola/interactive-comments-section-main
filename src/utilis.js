@@ -18,3 +18,24 @@ export const data = [
     details: "maxblagun 2 weeks ago ago",
   },
 ];
+export const data2 = [
+  {
+    id: 1,
+    image: ramsesmiron,
+    name: "Ramsesmiron",
+    date: "1 week ago",
+    link: "@maxblagun",
+    body: "Impressive! Though it seem the rag feature could be improved But overall it look incridible. You've nailed the design and the responsiveness at various breakpoint works really well.",
+    flag: false,
+  },
+  {
+    id: 2,
+    image: juliusomo,
+    name: "Juliusomo",
+    date: "2 days ago",
+    link: "@ramsesmiron",
+    body: "Impressive! Though it seem the rag feature could be improved But overall it look incridible. You've nailed the design and the responsiveness at various breakpoint works really well.",
+    buttonText: "You",
+    flag: true,
+  },
+];
