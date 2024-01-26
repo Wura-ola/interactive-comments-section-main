@@ -2,12 +2,14 @@ import "./App.css";
 import ramsesmiron from "./assets/avatars/image-ramsesmiron.png";
 import Data from "./components/Data";
 import Data2 from "./components/Data2";
+import Input from "./components/Input";
 
 function App() {
   return (
     <main className=" min-h-screen max-w-2xl mx-auto flex flex-col justify-center items-center font-rubik text-sm  ">
       <Data />
       <Data2 />
+      <Input />
 
       <div className=" hidden md:bg-white md:flex md:justify-between md:min-h-150px md:rounded md:shadow-sm md:shadow-gray-500 md:mt-3 md:py-2 md:px-7">
         <img

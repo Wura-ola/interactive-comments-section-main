@@ -1,5 +1,5 @@
 import React from "react";
-
+import { data } from "../utilis";
 function Input() {
   return (
     <div className=" hidden md:bg-white md:flex md:justify-between md:min-h-150px md:rounded md:shadow-sm md:shadow-gray-500 md:mt-3 md:py-2 md:px-7">
