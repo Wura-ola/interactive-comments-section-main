@@ -1,5 +1,6 @@
 import React from "react";
-
+import ramsesmiron from "../assets/avatars/image-ramsesmiron.png";
+import Textarea from "./Textarea";
 import { data } from "../utilis";
 function Input() {
   return (
@@ -9,11 +10,12 @@ function Input() {
         alt="User Avatar"
         className=" md:visible md:w-11 md:rounded-full md:mr-4 md:self-start"
       />
-      <textarea
+      <Textarea />
+      {/* <textarea
         type="text"
         placeholder="Add a comment..."
         className="border-2 border-lightGray w-[30rem] h-24 "
-      ></textarea>
+      ></textarea> */}
       {/* </div> */}
       <button className="ml-4 px-3 py-1 self-start bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
         SEND

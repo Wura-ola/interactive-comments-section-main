@@ -4,10 +4,18 @@ import reply from "../assets/icon-reply.svg";
 import dele from "../assets/icon-delete.svg";
 import edit from "../assets/icon-edit.svg";
 import { data2 } from "../utilis";
+import { useState } from "react";
+import Modal from "./Modal";
 
 function Data2() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const toggleModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <div>
+      <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}></Modal>
       {data2?.map((item, index) => {
         return (
           <div key={index} className=" flex justify-between">
@@ -44,7 +52,12 @@ function Data2() {
                     {item.flag === true ? (
                       <div className=" hidden md:visible md:flex md:items-center ">
                         <img src={dele} alt="" />
-                        <h2 className="pr-3 pl-3 text-red-500">Delete</h2>
+                        <h2
+                          className="pr-3 pl-3 text-red-500 cursor-pointer"
+                          onClick={toggleModal}
+                        >
+                          Delete
+                        </h2>
                         <img src={edit} alt="" className="" />
                         <h2 className=" pr-3 pl-3 text-blue-500">Edit</h2>
                       </div>
