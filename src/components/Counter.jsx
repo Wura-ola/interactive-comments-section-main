@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./Button";
 
 const couter = () => {
   const [count, setCount] = useState(10);
@@ -20,20 +21,27 @@ const couter = () => {
   };
   return (
     <div className="ml-6">
-      <h1>Count value is:{count}</h1>
-      <button className="mr-6" onClick={() => increment(4)}>
-        increment
-      </button>
-      <button
-        className="ml-6 mr-6"
-        onClick={() => decrement(3)}
-        disabled={count === 0}
-      >
-        decrement
-      </button>
-      <button className="ml-6 mr-6" onClick={reset}>
-        reset
-      </button>
+      <h1 className=" mb-3 flex justify-center items-center">
+        Count value is : {count}
+      </h1>
+
+      <Button
+        className="bg-red-500 p-2 rounded-md font-poppins"
+        text="Increment"
+        handleButton={() => increment(4)}
+      />
+
+      <Button
+        className="bg-blue-500 p-2 rounded-md"
+        text="Reset"
+        handleButton={reset}
+      />
+      <Button
+        className="p-2 rounded-md bg-green-500 disabled:cursor-not-allowed"
+        text="Decrement"
+        handleButton={() => decrement(3)}
+        disabled={count <= 0}
+      />
     </div>
   );
 };
