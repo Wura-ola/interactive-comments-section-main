@@ -1,4 +1,5 @@
 import React from "react";
+import ramsesmiron from "../assets/avatars/image-ramsesmiron.png";
 
 function InputMobile() {
   return (
