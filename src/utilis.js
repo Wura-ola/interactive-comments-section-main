@@ -39,3 +39,11 @@ export const data2 = [
     flag: true,
   },
 ];
+export const Modal = [
+  {
+    id: 1,
+    head: "Delete Comment",
+    body: "Are you sure you want to delete this comment?This will remove the comment and can't be undone.",
+    flag: false,
+  },
+];
