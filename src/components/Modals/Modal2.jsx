@@ -1,7 +1,20 @@
 import React from "react";
 
-function Modal2(props) {
-  return <div>{props.children}</div>;
-}
+const Modals = ({ isOpen, onClose, children }) => {
+  return (
+    <>
+      {isOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <div className="modal-content">
+              {children}
+              <button onClick={onClose}>Close Modal</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
-export default Modal2;
+export default Modals;

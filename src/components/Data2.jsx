@@ -5,22 +5,47 @@ import dele from "../assets/icon-delete.svg";
 import edit from "../assets/icon-edit.svg";
 import { data2 } from "../utilis";
 import { useState } from "react";
-import DeleteModal from "./Modals/DeleteModal";
-import EditModal from "./Modals/EditModal";
+import Modal from "./Modal";
+
+// import DeleteModal from "./Modals/DeleteModal";
+// import EditModal from "./Modals/EditModal";
+// import Mos from "./Modals/Mos";
 
 function Data2() {
-  const [showModal, setShowModal] = useState(false);
-  const [showEditModal, setShowEditModal] = useState(false);
-  function updateShowModal() {
-    setShowModal(true);
-  }
-  function updateEditModal() {
-    setShowEditModal(true);
-  }
+  // const [showModal, setShowModal] = useState(false);
+  // const [showEditModal, setShowEditModal] = useState(false);
+  // function updateShowModal() {
+  //   setShowModal(true);
+  // }
+  // function updateEditModal() {
+  //   setShowEditModal(true);
+  // }
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // const handleOpenModal = () => {
+  //   setIsOpen(true);
+  //   console.log("modal is opened");
+  // };
+
+  // const handleCloseModal = () => {
+  //   setIsOpen(false);
+  //   console.log("modal is closed");
+  // };
+
+  const handleButtonClick = () => {
+    // Toggle the modal state
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const handleModalClose = () => {
+    // Close the modal
+    setIsModalOpen(false);
+  };
   return (
     <div>
-      <DeleteModal showModal={showModal} />;
-      <EditModal showEditModal={showEditModal} />
+      {/* {<DeleteModal showModal={showModal} />} */}
+      {/* // <EditModal showEditModal={showEditModal} /> */}
+
       {data2?.map((item, index) => {
         return (
           <div key={index} className=" flex justify-between">
@@ -58,14 +83,25 @@ function Data2() {
                       <div className=" hidden md:visible md:flex md:items-center ">
                         <button
                           className="flex items-center"
-                          onClick={updateShowModal}
+
+                          // onClick={updateShowModal}
                         >
-                          <img src={dele} alt="" />
-                          <h2 className="pr-3 pl-3 text-red-500">Delete</h2>
+                          {isModalOpen ? (
+                            "Close Modal"
+                          ) : (
+                            <img
+                              src={dele}
+                              alt=""
+                              onClick={handleButtonClick}
+                            />
+                          )}
                         </button>
+                        <div onClick={handleModalClose}>
+                          {isModalOpen && <Modal />}
+                        </div>
                         <button
                           className="flex items-center"
-                          onClick={updateEditModal}
+                          // onClick={updateEditModal}
                         >
                           <img src={edit} alt="" className="" />
                           <h2 className=" pr-3 pl-3 text-blue-500">Edit</h2>
