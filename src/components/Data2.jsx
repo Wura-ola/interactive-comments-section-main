@@ -5,32 +5,14 @@ import dele from "../assets/icon-delete.svg";
 import edit from "../assets/icon-edit.svg";
 import { data2 } from "../utilis";
 import { useState } from "react";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 
-// import DeleteModal from "./Modals/DeleteModal";
-// import EditModal from "./Modals/EditModal";
+import DeleteModal from "./Modals/DeleteModal";
+import EditModal from "./Modals/EditModal";
 // import Mos from "./Modals/Mos";
 
 function Data2() {
-  // const [showModal, setShowModal] = useState(false);
-  // const [showEditModal, setShowEditModal] = useState(false);
-  // function updateShowModal() {
-  //   setShowModal(true);
-  // }
-  // function updateEditModal() {
-  //   setShowEditModal(true);
-  // }
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // const handleOpenModal = () => {
-  //   setIsOpen(true);
-  //   console.log("modal is opened");
-  // };
-
-  // const handleCloseModal = () => {
-  //   setIsOpen(false);
-  //   console.log("modal is closed");
-  // };
 
   const handleButtonClick = () => {
     // Toggle the modal state
@@ -43,9 +25,6 @@ function Data2() {
   };
   return (
     <div>
-      {/* {<DeleteModal showModal={showModal} />} */}
-      {/* // <EditModal showEditModal={showEditModal} /> */}
-
       {data2?.map((item, index) => {
         return (
           <div key={index} className=" flex justify-between">
@@ -95,17 +74,29 @@ function Data2() {
                               onClick={handleButtonClick}
                             />
                           )}
+                          <h2 className=" pr-3 pl-3 text-red-500">Delete</h2>
                         </button>
                         <div onClick={handleModalClose}>
-                          {isModalOpen && <Modal />}
+                          {isModalOpen && <DeleteModal />}
                         </div>
                         <button
                           className="flex items-center"
                           // onClick={updateEditModal}
                         >
-                          <img src={edit} alt="" className="" />
+                          {isModalOpen ? (
+                            "Close Modal"
+                          ) : (
+                            <img
+                              src={edit}
+                              alt=""
+                              onClick={handleButtonClick}
+                            />
+                          )}
                           <h2 className=" pr-3 pl-3 text-blue-500">Edit</h2>
                         </button>
+                        <div onClick={handleModalClose}>
+                          {isModalOpen && <EditModal />}
+                        </div>
                       </div>
                     ) : (
                       <div>
