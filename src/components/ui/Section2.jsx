@@ -13,6 +13,8 @@ import EditModal from "../Modals/EditModal";
 
 function Section2() {
   const [showModal, setShowModal] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
+
   const [id, setId] = useState(0);
   const handleShowModal = () => {
     setShowModal(true);
@@ -23,10 +25,17 @@ function Section2() {
     setShowModal(false);
   };
 
+  const handleDeleteOpen = () => {
+    setDeleteModal(true);
+  };
+
+  const handleDeleteClose = () => {
+    setDeleteModal(false);
+  };
   return (
     <div>
       <EditModal showModal={showModal} id={0} close={handleModalClose} />
-      <DeleteModal />
+      <DeleteModal showModal={deleteModal} id={0} close={handleDeleteClose} />
       {section2Arry?.map((item, index) => {
         return (
           <div key={index} className=" flex justify-between">
@@ -62,7 +71,10 @@ function Section2() {
                     </div>
                     {item.flag === true ? (
                       <div className=" hidden md:visible md:flex md:items-center ">
-                        <button className="flex items-center">
+                        <button
+                          className="flex items-center"
+                          onClick={handleDeleteOpen}
+                        >
                           <h2 className=" pr-3 pl-3 text-red-500">Delete</h2>
                         </button>
                         <div onClick={handleModalClose}></div>

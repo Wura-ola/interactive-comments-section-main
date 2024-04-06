@@ -2,31 +2,10 @@ import React from "react";
 import { Modal } from "../../utilis";
 import Button from "../button/Button";
 import { section1Array } from "../../utilis";
-// import { useState } from "react";
-
-// import Modal2 from "./Modal2.jsx";
-
-// const carArray = [
-//   { name: "Ferarri", price: "5 Million" },
-//   { name: "Bugatti", price: "3 Million" },
-//   { name: "Honda", price: "5 Thousand" },
-// ];
-
-// console.log(carArray?.map((item) => item.price));
 
 function EditModal(props) {
   const { showModal, id, close } = props;
   const item = section1Array[id];
-  // const [showModal, setShowModal] = useState(false);
-  //  const [id, setId] = useState(0);
-  //  const handleShowModal = () => {
-  //    setShowModal(true);
-  //  };
-
-  // const handleModalClose = () => {
-  //   console.log("close close");
-  //   setShowModal(false);
-  // };
 
   return (
     <>
