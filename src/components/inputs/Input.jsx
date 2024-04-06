@@ -1,8 +1,8 @@
 import React from "react";
-import ramsesmiron from "../assets/avatars/image-ramsesmiron.png";
+import ramsesmiron from "../../assets/avatars/image-ramsesmiron.png";
 import Textarea from "./Textarea";
-import { data } from "../utilis";
-import Button from "./Button";
+import { section1Array } from "../../utilis";
+import Button from "../button/Button";
 function Input() {
   return (
     <div className=" hidden md:bg-white md:flex md:justify-between md:min-h-150px md:rounded md:shadow-sm md:shadow-gray-500 md:mt-3 md:py-2 md:px-7">

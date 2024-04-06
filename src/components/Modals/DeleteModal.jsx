@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "../../utilis";
-import Button from "../Button";
+import Button from "../button/Button";
 
 // import Modal2 from "./Modal2.jsx";
 

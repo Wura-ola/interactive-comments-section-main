@@ -1,13 +1,13 @@
 import React from "react";
-import { data } from "../utilis";
-import plus from "../assets/icon-plus.svg";
-import minus from "../assets/icon-minus.svg";
-import reply from "../assets/icon-reply.svg";
+import { section1Array } from "../../utilis";
+import plus from "../../assets/icon-plus.svg";
+import minus from "../../assets/icon-minus.svg";
+import reply from "../../assets/icon-reply.svg";
 
-function Data() {
+function Section1() {
   return (
     <div className="flex flex-col gap-3">
-      {data?.map((item, index) => {
+      {section1Array?.map((item, index) => {
         return (
           <div key={index}>
             {
@@ -60,4 +60,4 @@ function Data() {
   );
 }
 
-export default Data;
+export default Section1;

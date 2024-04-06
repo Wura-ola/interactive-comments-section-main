@@ -1,31 +1,33 @@
-import plus from "../assets/icon-plus.svg";
-import minus from "../assets/icon-minus.svg";
-import reply from "../assets/icon-reply.svg";
-import dele from "../assets/icon-delete.svg";
-import edit from "../assets/icon-edit.svg";
-import { data2 } from "../utilis";
+import plus from "../../assets/icon-plus.svg";
+import minus from "../../assets/icon-minus.svg";
+import reply from "../../assets/icon-reply.svg";
+import dele from "../../assets/icon-delete.svg";
+import edit from "../../assets/icon-edit.svg";
+import { section2Arry } from "../../utilis";
 import { useState } from "react";
 // import Modal from "./Modal";
 
-import DeleteModal from "./Modals/DeleteModal";
-import EditModal from "./Modals/EditModal";
+import DeleteModal from "../Modals/DeleteModal";
+import EditModal from "../Modals/EditModal";
 // import Mos from "./Modals/Mos";
 
-function Data2() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleButtonClick = () => {
-    // Toggle the modal state
-    setIsModalOpen(!isModalOpen);
+function Section2() {
+  const [showModal, setShowModal] = useState(false);
+  const [id, setId] = useState(0);
+  const handleShowModal = () => {
+    setShowModal(true);
   };
 
   const handleModalClose = () => {
-    // Close the modal
-    setIsModalOpen(false);
+    console.log("close close");
+    setShowModal(false);
   };
+
   return (
     <div>
-      {data2?.map((item, index) => {
+      <EditModal showModal={showModal} id={0} close={handleModalClose} />
+      <DeleteModal />
+      {section2Arry?.map((item, index) => {
         return (
           <div key={index} className=" flex justify-between">
             <div className="border-l-2 border-gray-400 h-18 flex justify-center mx-auto"></div>
@@ -60,43 +62,20 @@ function Data2() {
                     </div>
                     {item.flag === true ? (
                       <div className=" hidden md:visible md:flex md:items-center ">
-                        <button
-                          className="flex items-center"
-
-                          // onClick={updateShowModal}
-                        >
-                          {isModalOpen ? (
-                            "Close Modal"
-                          ) : (
-                            <img
-                              src={dele}
-                              alt=""
-                              onClick={handleButtonClick}
-                            />
-                          )}
+                        <button className="flex items-center">
                           <h2 className=" pr-3 pl-3 text-red-500">Delete</h2>
                         </button>
-                        <div onClick={handleModalClose}>
-                          {isModalOpen && <DeleteModal />}
-                        </div>
+                        <div onClick={handleModalClose}></div>
                         <button
                           className="flex items-center"
-                          // onClick={updateEditModal}
+                          onClick={() => {
+                            handleShowModal();
+                            setId(item.id);
+                          }}
                         >
-                          {isModalOpen ? (
-                            "Close Modal"
-                          ) : (
-                            <img
-                              src={edit}
-                              alt=""
-                              onClick={handleButtonClick}
-                            />
-                          )}
-                          <h2 className=" pr-3 pl-3 text-blue-500">Edit</h2>
+                          <h2 className=" pr-3 pl-3 text-blue-500">Edddddit</h2>
                         </button>
-                        <div onClick={handleModalClose}>
-                          {isModalOpen && <EditModal />}
-                        </div>
+                        <div onClick={handleModalClose}></div>
                       </div>
                     ) : (
                       <div>
@@ -144,4 +123,4 @@ function Data2() {
   );
 }
 
-export default Data2;
+export default Section2;

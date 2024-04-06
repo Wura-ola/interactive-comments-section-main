@@ -3,7 +3,7 @@ import ramsesmiron from "./assets/avatars/image-ramsesmiron.png";
 import juliusomo from "./assets/avatars/image-juliusomo.png";
 import maxblagun from "./assets/avatars/image-maxblagun.png";
 
-export const data = [
+export const section1Array = [
   {
     id: 1,
     image: amyrobson,
@@ -18,7 +18,7 @@ export const data = [
     details: "maxblagun 2 weeks ago ago",
   },
 ];
-export const data2 = [
+export const section2Arry = [
   {
     id: 1,
     image: ramsesmiron,
@@ -39,11 +39,4 @@ export const data2 = [
     flag: true,
   },
 ];
-export const Modal = [
-  {
-    id: 1,
-    head: "Delete Comment",
-    body: "Are you sure you want to delete this comment?This will remove the comment and can't be undone.",
-    flag: false,
-  },
-];
+export const Modal = [];
