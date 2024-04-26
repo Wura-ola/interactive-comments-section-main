@@ -14,6 +14,7 @@ import EditModal from "../Modals/EditModal";
 function Section2() {
   const [showModal, setShowModal] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
+  const [items, setItems] = useState(section2Arry);
 
   const [id, setId] = useState(0);
   const handleShowModal = () => {
@@ -29,14 +30,21 @@ function Section2() {
     setDeleteModal(true);
   };
 
-  const handleDeleteClose = () => {
-    setDeleteModal(false);
-  };
+  const handleDeleteClose = () => setDeleteModal(false);
+
   return (
     <div>
-      <EditModal showModal={showModal} id={0} close={handleModalClose} />
-      <DeleteModal showModal={deleteModal} id={0} close={handleDeleteClose} />
-      {section2Arry?.map((item, index) => {
+      <EditModal showModal={showModal} id={id} close={handleModalClose} />
+      <DeleteModal
+        showModal={deleteModal}
+        id={id}
+        close={handleDeleteClose}
+        setShowModal={setDeleteModal}
+        items={items}
+        setItems={setItems}
+      />
+
+      {items?.map((item, index) => {
         return (
           <div key={index} className=" flex justify-between">
             <div className="border-l-2 border-gray-400 h-18 flex justify-center mx-auto"></div>
@@ -63,6 +71,7 @@ function Section2() {
                         {item.buttonText && (
                           <button className="text-white bg-blue-500 py-0.5 mx-2 rounded-sm px-2">
                             {item.buttonText}
+                            onclick
                           </button>
                         )}
                       </div>
@@ -73,11 +82,14 @@ function Section2() {
                       <div className=" hidden md:visible md:flex md:items-center ">
                         <button
                           className="flex items-center"
-                          onClick={handleDeleteOpen}
+                          onClick={() => {
+                            setId(item.id - 1);
+                            handleDeleteOpen();
+                          }}
                         >
                           <h2 className=" pr-3 pl-3 text-red-500">Delete</h2>
                         </button>
-                        <div onClick={handleModalClose}></div>
+                        {/* <div onClick={handleModalClose}></div> */}
                         <button
                           className="flex items-center"
                           onClick={() => {
@@ -87,7 +99,7 @@ function Section2() {
                         >
                           <h2 className=" pr-3 pl-3 text-blue-500">Edddddit</h2>
                         </button>
-                        <div onClick={handleModalClose}></div>
+                        {/* <div onClick={handleModalClose}></div> */}
                       </div>
                     ) : (
                       <div>
@@ -102,15 +114,7 @@ function Section2() {
                     <a href="#" className="text-blue-500 pr-2 ">
                       @ramsesmiron
                     </a>
-                    Impressive! Though it seem the rag feature could be improved
-                    But overall it
-                    {/* </p> */}
-                    {/* <p> */}
-                    look incridible. You've nailed the design and the
-                    responsiveness at various
-                    {/* </p> */}
-                    {/* <p> */}
-                    breakpoint works really well.
+                    {item.body}
                   </p>
                 </div>
                 <div className="md:hidden  mt-4 flex justify-between">

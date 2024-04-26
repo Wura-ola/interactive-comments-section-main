@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal } from "../../utilis";
+
 import Button from "../button/Button";
 import { section1Array } from "../../utilis";
 

@@ -5,12 +5,12 @@ import InputMobile from "./components/inputs/InputMobile";
 function App() {
   return (
     <main className="m-5 h-screen max-w-2xl mx-auto flex flex-col justify-center items-center  text-sm on ">
-      <Data />
+      {/* <Data /> */}
       <Data2 />
 
-      <Input />
+      {/* <Input /> */}
 
-      <InputMobile />
+      {/* <InputMobile /> */}
     </main>
   );
 }

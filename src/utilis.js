@@ -20,7 +20,7 @@ export const section1Array = [
 ];
 export const section2Arry = [
   {
-    id: 1,
+    id: 0,
     image: ramsesmiron,
     name: "Ramsesmiron",
     date: "1 week ago",
@@ -29,7 +29,7 @@ export const section2Arry = [
     flag: false,
   },
   {
-    id: 2,
+    id: 1,
     image: juliusomo,
     name: "Juliusomo",
     date: "2 days ago",
@@ -38,5 +38,34 @@ export const section2Arry = [
     buttonText: "You",
     flag: true,
   },
+  {
+    id: 2,
+    image: juliusomo,
+    name: "Esther",
+    date: "6 days ago",
+    link: "@ramsesmiron",
+    body: "Delete this body",
+    buttonText: "You",
+    flag: true,
+  },
+  {
+    id: 3,
+    image: juliusomo,
+    name: "anna",
+    date: "8 days ago",
+    link: "@ramsesmiron",
+    body: "Any  text at all",
+    buttonText: "You",
+    flag: true,
+  },
+  {
+    id: 4,
+    image: juliusomo,
+    name: "Mirabel",
+    date: "1 day ago",
+    link: "@ramsesmiron",
+    body: "Any body text you want",
+    buttonText: "Me",
+    flag: true,
+  },
 ];
-export const Modal = [];
